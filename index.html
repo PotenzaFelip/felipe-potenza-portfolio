@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Amaral Potenza | Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7b29ff;
+            --secondary: #5dd496;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --gray: #666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light); color: #333; line-height: 1.6; }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            margin-bottom: 1rem;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .container { max-width: 1000px; margin: -40px auto 40px; background: var(--white); padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        .header-info h1 { font-size: 2.2rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
+        .header-info p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; }
+
+        .contact-bar { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 10px; }
+        .contact-bar a { color: white; text-decoration: none; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .contact-bar a:hover { opacity: 0.8; text-decoration: underline; }
+
+        h2 { color: var(--primary); font-size: 1.5rem; border-bottom: 2px solid var(--secondary); margin: 2rem 0 1rem; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        h3 { color: var(--dark); font-size: 1.2rem; margin-bottom: 0.3rem; }
+        
+        .sub-header { color: var(--primary); font-weight: 600; margin-bottom: 5px; display: block; }
+        .date { font-style: italic; color: var(--gray); font-size: 0.9rem; margin-bottom: 10px; display: block; }
+
+        .section-content { margin-bottom: 2rem; }
+        .profile-text { text-align: justify; font-size: 1.05rem; }
+
+        ul { list-style: none; padding-left: 1.2rem; }
+        ul li { position: relative; margin-bottom: 8px; }
+        ul li::before { content: "•"; color: var(--secondary); font-weight: bold; position: absolute; left: -1.2rem; font-size: 1.2rem; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .skill-item strong { color: var(--dark); }
+
+        .edu-item, .cert-item { margin-bottom: 15px; }
+
+        @media (max-width: 768px) {
+            .container { margin: 0; border-radius: 0; padding: 1.5rem; }
+            header { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="perfil.jpg" alt="Felipe Amaral Potenza" class="profile-img">
+    <div class="header-info">
+        <h1>FELIPE AMARAL POTENZA</h1>
+        <p>Desenvolvedor FullStack .NET | Especialista em Infraestrutura & DevOps</p>
+        <div class="contact-bar">
+            <span><i class="fas fa-map-marker-alt"></i> São José dos Campos – SP</span>
+            <span><i class="fas fa-phone"></i> (12) 99792-7371</span>
+            <a href="mailto:potenzafelipe@gmail.com"><i class="fas fa-envelope"></i> potenzafelipe@gmail.com</a>
+        </div>
+        <div class="contact-bar">
+            <a href="https://www.linkedin.com/in/felipe-potenza-b411a919b/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/PotenzaFelip" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <section class="section-content">
+        <h2>Perfil Profissional</h2>
+        <p class="profile-text">
+            Desenvolvedor FullStack com mais de 3 anos de experiência em sistemas de missão crítica, especializado no ecossistema .NET e tecnologias modernas de front-end. Histórico comprovado na entrega de soluções escaláveis, otimização de performance de banco de dados em até 60% e automação de processos via pipelines de CI/CD. Atualmente graduando em Ciência da Computação, focado em arquiteturas reativas e integração de Inteligência Artificial.
+        </p>
+    </section>
+
+    <section class="section-content">
+        <h2>Experiência Profissional</h2>
+        
+        <div class="job">
+            <h3>SangoIT Solutions | Desenvolvedor Full Stack (Freelance)</h3>
+            <span class="date">Outubro de 2025 – Presente</span>
+            <ul>
+                <li><strong>Lidero</strong> o desenvolvimento e a sustentação da infraestrutura do Portal-Barah, garantindo 100% de estabilidade no ciclo de deploy.</li>
+                <li><strong>Implemento</strong> pipelines de CI/CD utilizando GitHub Actions e gerencio infraestrutura em nuvem (AWS/DigitalOcean) para automação de entregas.</li>
+                <li><strong>Acelero</strong> a prototipagem de produtos digitais integrando IA (OpenAI API) e Replit, reduzindo o tempo entre conceito e MVP funcional.</li>
+                <li><strong>Desenvolvo</strong> sistemas em conformidade com normas regulatórias (NR-1), focando em segurança e gestão de dados sensíveis.</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 25px;" class="job">
+            <h3>SoftWillians IT Solutions | Analista de Sistemas</h3>
+            <span class="date">Junho de 2021 – Junho de 2024</span>
+            <ul>
+                <li><strong>Otimizei</strong> consultas SQL complexas e procedimentos em C#, resultando em uma melhoria de 60% no tempo de resposta das aplicações.</li>
+                <li><strong>Reduzi</strong> em 40% o volume de bugs críticos nos módulos de Crédito, E-Commerce e Transporte através de refatoração de código e testes rigorosos.</li>
+                <li><strong>Colaborei</strong> em ambientes multidisciplinares sob metodologias ágeis (Scrum/Kanban) para garantir entregas pontuais e alinhadas aos objetivos de negócio.</li>
+                <li><strong>Sustentei</strong> sistemas de larga escala, garantindo alta disponibilidade para operações de logística e e-commerce.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-content">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <p><strong>Linguagens:</strong> C# (.NET Avançado), JavaScript/TypeScript, Java, SQL (Avançado), Node.js.</p>
+            </div>
+            <div class="skill-item">
+                <p><strong>Front-end:</strong> React, HTML5, CSS3, Angular.</p>
+            </div>
+            <div class="skill-item">
+                <p><strong>Back-end & Infra:</strong> ASP.NET Core, Web API, Docker, GitHub Actions, AWS.</p>
+            </div>
+            <div class="skill-item">
+                <p><strong>Banco de Dados:</strong> SQL Server, MySQL, PostgreSQL.</p>
+            </div>
+            <div class="skill-item">
+                <p><strong>Ferramentas:</strong> Git, Visual Studio, VS Code, Linux, Postman.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-content">
+        <h2>Formação Acadêmica</h2>
+        <div class="edu-item">
+            <p><strong>Bacharelado em Ciência da Computação</strong> | Em andamento</p>
+        </div>
+        <div class="edu-item">
+            <p><strong>Técnico em Informática</strong> | ETEP Centro Universitário (Concluído em 2019)</p>
+        </div>
+    </section>
+
+    <section class="section-content">
+        <h2>Certificações</h2>
+        <div class="cert-item">
+            <ul>
+                <li>Cloud Computing: AWS e Recursos de Nuvem – Alura</li>
+                <li>Spring Boot 3: Boas Práticas, Proteção de APIs e Deploy – Alura</li>
+                <li>Java Reativo & Integração com OpenAI (GPT): Alura</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-content">
+        <h2>Idiomas</h2>
+        <p><strong>Português:</strong> Nativo | <strong>Inglês:</strong> Básico (Leitura técnica) | <strong>Espanhol:</strong> Básico</p>
+    </section>
+</div>
+
+<footer style="text-align: center; padding: 20px; color: #888; font-size: 0.85rem;">
+    <p>Página gerada para Portfólio Profissional - 2026</p>
+</footer>
+
+</body>
+</html>
