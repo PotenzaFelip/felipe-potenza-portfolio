@@ -9,7 +9,7 @@ Este repositório contém o código-fonte do meu currículo profissional e portf
 * **GitHub Pages** para hospedagem e deploy automatizado.
 
 ## 🔗 Acesse Online
-Você pode visualizar a versão final aqui: [SEU-LINK-AQUI.github.io/NOME-DO-REPO]
+Você pode visualizar a versão final aqui: https://potenzafelip.github.io/felipe-potenza-portfolio/
 
 ## 🛠️ Sobre o Profissional
 Desenvolvedor FullStack .NET com histórico de impacto em sistemas de missão crítica, focado em alta performance e infraestrutura moderna (DevOps). Atualmente graduando em Ciência da Computação.
