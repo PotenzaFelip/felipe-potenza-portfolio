@@ -1,179 +1,444 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe Amaral Potenza | Software Engineer</title>
+    <title>Felipe Amaral Potenza | Software Engineer Full Stack</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --accent: #6366f1; /* Indigo moderno */
-            --bg: #f8fafc;
+            --accent: #8b5cf6; /* Violeta vibrante */
+            --cyan: #22d3ee; /* Ciano tecnológico */
+            --bg: #fdfcff;
             --text-main: #0f172a;
             --text-sub: #64748b;
             --white: #ffffff;
+            --border: #e2e8f0;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--bg); color: var(--text-main); padding: 50px 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            padding: 50px 20px;
+            line-height: 1.6;
+        }
 
         .wrapper {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             background: var(--white);
             border-radius: 24px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
             overflow: hidden;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--border);
         }
 
-        /* Top Header */
+        /* HEADER VIBRANTE & TECNOLÓGICO */
         header {
             padding: 60px;
-            background: radial-gradient(circle at top right, #eef2ff, var(--white));
+            background: linear-gradient(135deg, #ede9fe 0%, #cffafe 100%);
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #f1f5f9;
         }
 
-        .header-content h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
-        .header-content p { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-top: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .header-content h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            color: #1e1b4b;
+            margin-bottom: 10px;
+        }
+
+        .header-content p {
+            color: #6d28d9;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .contact-top {
+            margin-top: 25px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-top span {
+            font-size: 0.9rem;
+            color: #4c1d95;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-top i {
+            color: var(--accent);
+        }
 
         .profile-img {
-            width: 140px; height: 140px; border-radius: 50%;
-            object-fit: cover; border: 6px solid var(--white);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid var(--white);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
-        /* Content Layout */
-        .main-grid { display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 60px; }
-
-        h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-sub); margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
-        h2::after { content: ""; flex: 1; height: 1px; background: #f1f5f9; }
-
-        .section { margin-bottom: 50px; }
-
-        /* Experience Items */
-        .exp-item { margin-bottom: 35px; }
-        .exp-title { font-size: 1.2rem; font-weight: 700; color: var(--text-main); }
-        .exp-company { color: var(--accent); font-weight: 600; margin-bottom: 12px; display: block; }
-        .exp-desc { color: var(--text-sub); font-size: 0.95rem; line-height: 1.6; list-style: none; }
-        .exp-desc li { margin-bottom: 8px; padding-left: 15px; position: relative; }
-        .exp-desc li::before { content: ""; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; position: absolute; left: 0; top: 10px; }
-
-        /* Impact Highlights */
-        .impact-pill {
-            display: inline-block; background: #f5f3ff; color: #5b21b6;
-            padding: 4px 12px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; margin-right: 5px;
+        /* GRID PRINCIPAL */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 0;
         }
 
-        /* Sidebar Elements */
-        .sidebar-box { margin-bottom: 40px; }
-        .contact-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-sub); font-size: 0.9rem; margin-bottom: 15px; transition: 0.2s; }
-        .contact-link:hover { color: var(--accent); }
-        
-        .skill-tag {
-            display: inline-block; background: #f1f5f9; color: var(--text-main);
-            padding: 6px 14px; border-radius: 10px; font-size: 0.8rem; font-weight: 600; margin: 0 4px 8px 0;
+        .content-area {
+            padding: 60px;
+            border-right: 1px solid #f1f5f9;
         }
 
-        @media (max-width: 850px) {
-            header { flex-direction: column-reverse; text-align: center; padding: 40px; }
-            .profile-img { margin-bottom: 25px; }
-            .main-grid { grid-template-columns: 1fr; padding: 40px; }
+        .sidebar {
+            padding: 60px 40px;
+            background-color: #fafafa;
+        }
+
+        /* SEÇÕES */
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--text-sub);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 800;
+        }
+
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        /* EXPERIÊNCIA DETALHADA */
+        .exp-item {
+            margin-bottom: 45px;
+            position: relative;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .exp-role {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .exp-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            background: #f1f5f9;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .exp-company {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .exp-desc {
+            color: #475569;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .exp-list {
+            list-style: none;
+        }
+
+        .exp-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        .exp-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--cyan);
+            font-weight: bold;
+        }
+
+        .tech-stack-small {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-pill {
+            font-size: 0.75rem;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 2px 10px;
+            border-radius: 6px;
+            color: var(--text-sub);
+            font-weight: 600;
+        }
+
+        /* SIDEBAR BOXES */
+        .sidebar-box {
+            margin-bottom: 50px;
+        }
+
+        .sidebar-h3 {
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-group {
+            margin-bottom: 20px;
+        }
+
+        .skill-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-sub);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            padding: 10px;
+            border-radius: 12px;
+            background: white;
+            border: 1px solid var(--border);
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 900px) {
+            .main-grid { grid-template-columns: 1fr; }
+            header { flex-direction: column-reverse; text-align: center; }
+            .profile-img { margin-bottom: 30px; }
+            .content-area { border-right: none; }
         }
     </style>
 </head>
+
 <body>
 
-<div class="wrapper">
-    <header>
-        <div class="header-content">
-            <h1>Felipe Potenza</h1>
-            <p>FullStack Developer | .NET Specialist</p>
-            <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
-                <span style="font-size: 0.85rem; color: var(--text-sub);"><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</span>
-                <span style="font-size: 0.85rem; color: var(--text-sub);"><i class="fas fa-phone"></i> (12) 99792-7371</span>
+    <div class="wrapper">
+        <header>
+            <div class="header-content">
+                <h1>Felipe Potenza</h1>
+                <p>Software Engineer | Full Stack Specialist</p>
+                <div class="contact-top">
+                    <span><i class="fas fa-envelope"></i> potenzafelipe@gmail.com</span>
+                    <span><i class="fas fa-phone"></i> (12) 99792-7371</span>
+                    <span><i class="fas fa-map-marker-alt"></i> São José dos Campos, SP</span>
+                </div>
             </div>
-        </div>
-        <img src="perfil.jpg" alt="Felipe Potenza" class="profile-img">
-    </header>
+            <img src="perfil.jpg" alt="Felipe Potenza" class="profile-img">
+        </header>
 
-    <div class="main-grid">
-        <div class="content-area">
-            
-            <section class="section">
-                <h2>Experiência Profissional</h2>
+        <div class="main-grid">
+            <main class="content-area">
+
+                <section class="section">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p class="exp-desc">
+                        Engenheiro de Software Full Stack especializado no ecossistema <strong>.NET</strong> e em arquiteturas modernas baseadas em <strong>JavaScript/TypeScript</strong>. 
+                        Com experiência em projetos escaláveis e de alta performance, foco em entregar soluções robustas que unem automação inteligente e código limpo. 
+                        Especialista em fluxos de trabalho otimizados por <strong>IA</strong> e infraestrutura cloud resiliente.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Experiência Profissional</h2>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-role">Software Engineer (Freelance)</span>
+                            <span class="exp-date">2025 — Presente</span>
+                        </div>
+                        <span class="exp-company">SangoIT Solutions</span>
+                        <p class="exp-desc">Responsável pela arquitetura e manutenção de portal web moderno, integrando serviços de terceiros para automação financeira e de comunicação.</p>
+                        <ul class="exp-list">
+                            <li>Desenvolvimento Full Stack utilizando <strong>JavaScript e TypeScript (TSX)</strong> com foco em UI/UX.</li>
+                            <li>Gerenciamento e sustentação de infraestrutura em servidores <strong>Digital Ocean</strong>.</li>
+                            <li>Configuração de pipelines de <strong>CI/CD via GitHub Actions</strong> para deploys automatizados e seguros.</li>
+                            <li>Integração de serviços especializados: <strong>Resend</strong> (e-mails transacionais), <strong>Google Cloud Storage (GCS)</strong> e <strong>Asaas</strong> (pagamentos).</li>
+                            <li>Implementação de banco de dados relacional otimizado para as regras de negócio do portal.</li>
+                        </ul>
+                        <div class="tech-stack-small">
+                            <span class="tech-pill">TypeScript</span> <span class="tech-pill">React (TSX)</span> <span class="tech-pill">Digital Ocean</span> <span class="tech-pill">GitHub Actions</span> <span class="tech-pill">Asaas</span> <span class="tech-pill">Resend</span>
+                        </div>
+                    </div>
+
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-role">Analista de Sistemas Pleno</span>
+                            <span class="exp-date">2021 — 2024</span>
+                        </div>
+                        <span class="exp-company">SoftWillians IT Solutions</span>
+                        <p class="exp-desc">Atuação core no desenvolvimento de sistemas financeiros e e-commerce utilizando stack Microsoft.</p>
+                        <ul class="exp-list">
+                            <li>Otimização de consultas SQL e lógica de backend, resultando em <strong>60% de ganho de performance</strong>.</li>
+                            <li>Refatoração de módulos legados aplicando padrões <strong>SOLID</strong> e <strong>Clean Code</strong>.</li>
+                            <li>Redução de 40% em bugs críticos através de testes rigorosos e monitoramento.</li>
+                            <li>Desenvolvimento de módulos de crédito e integração de gateways de pagamento complexos.</li>
+                        </ul>
+                        <div class="tech-stack-small">
+                            <span class="tech-pill">C#</span> <span class="tech-pill">.NET</span> <span class="tech-pill">SQL Server</span> <span class="tech-pill">Entity Framework</span>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Formação Acadêmica</h2>
+                    <div class="exp-item" style="margin-bottom: 15px;">
+                        <span class="exp-role" style="font-size: 1.1rem;">Bacharelado em Ciência da Computação</span>
+                        <span style="color: var(--accent); font-weight: 700; font-size: 0.9rem;">Em andamento</span>
+                    </div>
+                    <div class="exp-item">
+                        <span class="exp-role" style="font-size: 1.1rem;">Técnico em Informática</span>
+                        <span style="color: var(--text-sub); font-weight: 600; font-size: 0.9rem;">ETEP • Concluído</span>
+                    </div>
+                </section>
+
+            </main>
+
+            <aside class="sidebar">
                 
-                <div class="exp-item">
-                    <span class="exp-title">Dev Full Stack (Freelance)</span>
-                    <span class="exp-company">SangoIT Solutions • 2025 — Presente</span>
-                    <ul class="exp-desc">
-                        <li>Liderança na infraestrutura e deploy do <strong>Portal-Barah</strong>.</li>
-                        <li>Automação CI/CD com GitHub Actions e infraestrutura em nuvem.</li>
-                        <li>Aceleração de MVPs através de engenharia de prompts e IA.</li>
-                    </ul>
+                <div class="sidebar-box">
+                    <h3 class="sidebar-h3"><i class="fas fa-link"></i> Links Profissionais</h3>
+                    <a href="https://linkedin.com/in/felipe-potenza-b411a919b/" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/PotenzaFelip" class="contact-link"><i class="fab fa-github"></i> GitHub/PotenzaFelip</a>
+                    <a href="mailto:potenzafelipe@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
                 </div>
 
-                <div class="exp-item">
-                    <span class="exp-title">Analista de Sistemas</span>
-                    <span class="exp-company">SoftWillians IT Solutions • 2021 — 2024</span>
-                    <ul class="exp-desc">
-                        <li><span class="impact-pill">60%</span> Melhoria de performance em consultas SQL e C#.</li>
-                        <li><span class="impact-pill">40%</span> Redução de bugs críticos em produção.</li>
-                        <li>Desenvolvimento e sustentação de sistemas de E-Commerce e Crédito.</li>
-                    </ul>
-                </div>
-            </section>
+                <div class="sidebar-box">
+                    <h3 class="sidebar-h3"><i class="fas fa-code"></i> Hard Skills</h3>
+                    
+                    <div class="skill-group">
+                        <span class="skill-label">Frontend & Scripting</span>
+                        <div class="skill-tags">
+                            <span class="tag">TypeScript</span> <span class="tag">React (TSX)</span> <span class="tag">JavaScript</span> <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
 
-            <section class="section">
-                <h2>Formação</h2>
-                <div class="exp-item" style="margin-bottom: 15px;">
-                    <span class="exp-title" style="font-size: 1rem;">Bacharelado em Ciência da Computação</span>
-                    <span style="color: var(--text-sub); font-size: 0.9rem;">Em andamento</span>
-                </div>
-                <div class="exp-item">
-                    <span class="exp-title" style="font-size: 1rem;">Técnico em Informática</span>
-                    <span style="color: var(--text-sub); font-size: 0.9rem;">ETEP • Concluído em 2019</span>
-                </div>
-            </section>
+                    <div class="skill-group">
+                        <span class="skill-label">Backend & Core</span>
+                        <div class="skill-tags">
+                            <span class="tag">.NET Core</span> <span class="tag">C#</span> <span class="tag">Node.js</span> <span class="tag">SQL Server</span>
+                        </div>
+                    </div>
 
+                    <div class="skill-group">
+                        <span class="skill-label">DevOps & Cloud</span>
+                        <div class="skill-tags">
+                            <span class="tag">Digital Ocean</span> <span class="tag">Git Actions</span> <span class="tag">Docker</span> <span class="tag">Nginx</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <span class="skill-label">Services & API</span>
+                        <div class="skill-tags">
+                            <span class="tag">Resend</span> <span class="tag">GCS</span> <span class="tag">Asaas API</span> <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3 class="sidebar-h3"><i class="fas fa-language"></i> Idiomas</h3>
+                    <p style="font-size: 0.85rem; font-weight: 700;">Português <span style="font-weight: 400; color: var(--text-sub);">• Nativo</span></p>
+                    <p style="font-size: 0.85rem; font-weight: 700; margin-top: 8px;">Inglês <span style="font-weight: 400; color: var(--text-sub);">• Técnico</span></p>
+                </div>
+
+            </aside>
         </div>
 
-        <aside class="sidebar">
-            <div class="sidebar-box">
-                <h2>Social & Links</h2>
-                <a href="https://linkedin.com/in/felipe-potenza-b411a919b/" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/PotenzaFelip" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
-                <a href="mailto:potenzafelipe@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
-            </div>
-
-            <div class="sidebar-box">
-                <h2>Stack Principal</h2>
-                <div class="skill-tag">C# (.NET)</div>
-                <div class="skill-tag">React</div>
-                <div class="skill-tag">TypeScript</div>
-                <div class="skill-tag">SQL Server</div>
-                <div class="skill-tag">Docker</div>
-                <div class="skill-tag">AWS</div>
-                <div class="skill-tag">Node.js</div>
-                <div class="skill-tag">CI/CD</div>
-            </div>
-
-            <div class="sidebar-box">
-                <h2>Idiomas</h2>
-                <p style="font-size: 0.9rem; font-weight: 600;">Português <span style="font-weight: 400; color: var(--text-sub);">• Nativo</span></p>
-                <p style="font-size: 0.9rem; font-weight: 600; margin-top: 5px;">Inglês <span style="font-weight: 400; color: var(--text-sub);">• Técnico</span></p>
-            </div>
-        </aside>
+        <footer style="text-align: center; padding: 40px; border-top: 1px solid #f1f5f9; background: #fafafa;">
+            <p style="color: var(--text-main); font-weight: 800; font-size: 0.95rem; margin-bottom: 5px;">Disponível para novas oportunidades Pleno</p>
+            <p style="color: var(--text-sub); font-size: 0.8rem;">&copy; 2026 Felipe Amaral Potenza</p>
+        </footer>
     </div>
-</div>
-
-<footer style="text-align: center; padding: 40px; color: var(--text-sub); font-size: 0.8rem;">
-    &copy; 2026 Felipe Amaral Potenza. Disponível para novas oportunidades.
-</footer>
 
 </body>
 </html>
